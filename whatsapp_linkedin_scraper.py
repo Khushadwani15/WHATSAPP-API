@@ -23,7 +23,12 @@ IMAGE_DIR.mkdir(exist_ok=True)
 SESSION_FILE = Path("linkedin_session.json")
 
 # Config options from .env
-TARGET_URL = os.getenv("SCRAPE_TARGET_URL", "https://www.linkedin.com/company/infed/posts/?feedView=all")
+TARGET_URL = [ os.getenv("SCRAPE_TARGET_URL", 
+                         "https://www.linkedin.com/company/infed/posts/?feedView=all", 
+                         "https://www.startupindia.gov.in/content/sih/en/ams-application/application-listing.html", 
+                         "https://www.microsoft.com/en-us/startups", 
+                         "https://aws.amazon.com/startups/", )
+             ]
 TARGET_PHONE = os.getenv("TARGET_PHONE", "7798582017")
 KEYWORDS = [k.strip().lower() for k in os.getenv("TARGET_KEYWORDS", "register").split(",")]
 
