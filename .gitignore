@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+downloaded_images/
+linkedin_session.json
+whatsapp_sent_posts.db
+*.png
+*.jpg
